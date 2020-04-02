@@ -8,6 +8,11 @@ const Clone = require('../util/clone');
  */
 const STORE_WAITING = true;
 
+/**
+ *
+ * 声音 block
+ *
+ */
 class Scratch3SoundBlocks {
     constructor (runtime) {
         /**

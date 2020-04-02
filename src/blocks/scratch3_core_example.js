@@ -8,6 +8,9 @@ const blockIconURI = 'data:image/svg+xml,%3Csvg id="rotate-counter-clockwise" xm
  * An example core block implemented using the extension spec.
  * This is not loaded as part of the core blocks in the VM but it is provided
  * and used as part of tests.
+ *
+ * 使用拓展规范实现的核心块示例。
+ * 它没有做为核心块的一部分被加载到 VM 中，但会测试程序会测试它。
  */
 class Scratch3CoreExample {
     constructor (runtime) {
@@ -53,6 +56,7 @@ class Scratch3CoreExample {
 
     /**
      * Example opcode just returns the name of the stage target.
+     * 示例中的 opcode 只是返回 stage target 的名字。
      * @returns {string} The name of the first target in the project.
      */
     exampleOpcode () {

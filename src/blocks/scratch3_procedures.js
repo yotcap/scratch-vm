@@ -1,3 +1,8 @@
+/**
+ *
+ * 自制积木 block
+ *
+ */
 class Scratch3ProcedureBlocks {
     constructor (runtime) {
         /**

@@ -1,5 +1,10 @@
 const Cast = require('../util/cast');
 
+/**
+ *
+ * 变量 block
+ *
+ */
 class Scratch3DataBlocks {
     constructor (runtime) {
         /**

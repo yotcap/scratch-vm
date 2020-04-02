@@ -2,6 +2,11 @@ const Cast = require('../util/cast');
 const Timer = require('../util/timer');
 const getMonitorIdForBlockWithArgs = require('../util/get-monitor-id');
 
+/**
+ *
+ * 侦测 block
+ *
+ */
 class Scratch3SensingBlocks {
     constructor (runtime) {
         /**

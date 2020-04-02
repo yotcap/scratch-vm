@@ -29,6 +29,12 @@ class Variable {
         case Variable.BROADCAST_MESSAGE_TYPE:
             this.value = this.name;
             break;
+        case Variable.MACHINE_TYPE:
+            this.value = 0;
+            break;
+        case Variable.MACHINE_TYPE_RES:
+            this.value = 0;
+            break;
         default:
             throw new Error(`Invalid variable type: ${this.type}`);
         }
@@ -64,6 +70,14 @@ class Variable {
      */
     static get BROADCAST_MESSAGE_TYPE () {
         return 'broadcast_msg';
+    }
+
+    static get MACHINE_TYPE () {
+        return 'machine_var_type';
+    }
+
+    static get MACHINE_TYPE_RES () {
+        return 'machine_var_type_res';
     }
 }
 

@@ -1,5 +1,10 @@
 const Cast = require('../util/cast');
 
+/**
+ *
+ * 事件 block
+ *
+ */
 class Scratch3EventBlocks {
     constructor (runtime) {
         /**

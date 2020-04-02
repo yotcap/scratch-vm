@@ -1,5 +1,10 @@
 const Cast = require('../util/cast');
 
+/**
+ *
+ * 控制 block
+ *
+ */
 class Scratch3ControlBlocks {
     constructor (runtime) {
         /**

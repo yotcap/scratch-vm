@@ -16,6 +16,11 @@ const MathUtil = require('../util/math-util');
  *      Used for comparison when determining whether to clear a say/think bubble.
  */
 
+/**
+ *
+ * 外观 block
+ *
+ */
 class Scratch3LooksBlocks {
     constructor (runtime) {
         /**

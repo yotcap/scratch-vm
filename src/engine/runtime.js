@@ -39,13 +39,15 @@ const defaultBlockPackages = {
     scratch3_sound: require('../blocks/scratch3_sound'),
     scratch3_sensing: require('../blocks/scratch3_sensing'),
     scratch3_data: require('../blocks/scratch3_data'),
-    scratch3_procedures: require('../blocks/scratch3_procedures')
+    scratch3_procedures: require('../blocks/scratch3_procedures'),
+    scratch3_machine: require('../blocks/scratch3_machine')
 };
 
 const defaultExtensionColors = ['#0FBD8C', '#0DA57A', '#0B8E69'];
 
 /**
  * Information used for converting Scratch argument types into scratch-blocks data.
+ * scratch 参数类型转换为 scratch-blocks 数据所需要的信息。
  * @type {object.<ArgumentType, {shadowType: string, fieldType: string}>}
  */
 const ArgumentTypeMap = (() => {
@@ -1212,6 +1214,7 @@ class Runtime extends EventEmitter {
 
     /**
      * Convert a button for scratch-blocks. A button has no opcode but specifies a callback name in the `func` field.
+     * 将按钮转换为 scratch-blocks，按钮不存在 opcode 但是指定了一个名叫 ·func· 回调方法。
      * @param {ExtensionBlockMetadata} buttonInfo - the button to convert
      * @property {string} func - the callback name
      * @param {CategoryInfo} categoryInfo - the category for this button
@@ -1220,7 +1223,10 @@ class Runtime extends EventEmitter {
      */
     _convertButtonForScratchBlocks (buttonInfo) {
         // for now we only support these pre-defined callbacks handled in scratch-blocks
-        const supportedCallbackKeys = ['MAKE_A_LIST', 'MAKE_A_PROCEDURE', 'MAKE_A_VARIABLE'];
+        // 目前，我们在 scratch-block 中只支持这些回调方法。
+        
+        // const supportedCallbackKeys = ['MAKE_A_LIST', 'MAKE_A_PROCEDURE', 'MAKE_A_VARIABLE'];
+        const supportedCallbackKeys = ['MAKE_A_LIST', 'MAKE_A_PROCEDURE', 'MAKE_A_VARIABLE', 'MAKE_A_MODEL'];
         if (supportedCallbackKeys.indexOf(buttonInfo.func) < 0) {
             log.error(`Custom button callbacks not supported yet: ${buttonInfo.func}`);
         }

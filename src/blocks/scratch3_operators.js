@@ -1,6 +1,11 @@
 const Cast = require('../util/cast.js');
 const MathUtil = require('../util/math-util.js');
 
+/**
+ *
+ * 运算 block
+ *
+ */
 class Scratch3OperatorsBlocks {
     constructor (runtime) {
         /**
